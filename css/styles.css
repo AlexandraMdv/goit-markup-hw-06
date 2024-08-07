@@ -64,7 +64,7 @@ body {
 
 @media (min-width: 1158px) {
   .container {
-    max-width: 1158px;
+    /* max-width: 1158px; */
   }
 }
 
@@ -209,13 +209,24 @@ body {
     gap: 40px;
     padding: 24px 0; */
     flex-direction: column;
-    padding: 16px 0;
+    padding: 16px 0 0;
     gap: 12px;
   }
   .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media (min-width: 1158px) {
+  .header-container {
+    width: 1158px;
+  }
+  .header-address-list {
+    flex-direction: row;
+    gap: 40px;
+    padding: 24px 0;
   }
 }
 
@@ -577,6 +588,7 @@ body {
 /* ------- Our portfolio section ------- */
 .section-our-portfolio {
   padding: 116px 0;
+  margin: 0 auto;
 }
 
 .section-our-portfolio-title {
@@ -607,7 +619,8 @@ body {
 
 @media (min-width: 1158px) {
   .section-our-portfolio .container {
-    width: 100%;
+    width: 1158px;
+    margin: 0 auto;
   }
   .our-portfolio-list-item {
     width: calc((100% - 48px) / 3);
