@@ -49,8 +49,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* ----- Mobile container width ----- */
 .container {
-  /* max-width: 1158px; */
   width: 320px;
   margin: 0 auto;
   padding: 0 16px;
@@ -59,12 +59,6 @@ body {
 @media (min-width: 768px) {
   .container {
     width: 768px;
-  }
-}
-
-@media (min-width: 1158px) {
-  .container {
-    /* max-width: 1158px; */
   }
 }
 
@@ -87,6 +81,7 @@ body {
 }
 
 .header-container {
+  /* For navigation bar - absolute position */
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -102,10 +97,6 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
-}
-
-.logo {
-  /* margin-right: 76px; */
 }
 
 .page-header-list {
@@ -127,7 +118,6 @@ body {
 
 .link-nav,
 .address-link {
-  /* color: #2e2f42; */
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -156,6 +146,8 @@ body {
 .address-link {
   color: #434455;
 }
+
+/* ----- Mobile Hamburger menu ----- */
 
 @media (max-width: 767px) {
   .header-container {
@@ -273,6 +265,8 @@ body {
   }
 }
 
+/* ----- Tablet navigation bar ----- */
+
 @media (min-width: 768px) {
   .header-container {
     width: 768px;
@@ -324,6 +318,8 @@ body {
   }
 }
 
+/* ----- Laptop navigation bar ----- */
+
 @media (min-width: 1158px) {
   .header-container {
     width: 1158px;
@@ -345,7 +341,6 @@ body {
 /* ------- Order section ------- */
 
 .section-order {
-  /* max-width: 320px; */
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -360,7 +355,6 @@ body {
 }
 
 .section-order-title {
-  /* max-width: 496px; */
   max-width: 55%;
   margin: 0 auto 72px;
 
@@ -374,7 +368,6 @@ body {
 .order-button {
   display: block;
   margin: 48px auto 0;
-  /* padding: 16px 32px; */
   border-radius: 4px;
   border: none;
   min-width: 169px;
@@ -397,12 +390,16 @@ body {
   background-color: #404bbf;
 }
 
+/* ----- Mobile Order Section ----- */
+/* Just give proper width */
 @media (min-width: 320px) {
   .section-order {
     width: 320px;
   }
 }
 
+/* ----- Tablet Order Section ----- */
+/* Adding Retinize - background image 2x */
 @media (min-width: 768px) {
   @media (min-resolution: 192dpi) {
     .section-order {
@@ -416,29 +413,19 @@ body {
   .section-order {
     width: 768px;
     padding: 112px 0;
-    /* padding: 188px 0; */
   }
   .section-order-title {
     margin: 0 auto 36px;
   }
 }
 
+/* ----- Laptop Order Section ----- */
 @media (min-width: 1158px) {
-  /* @media (min-resolution: 192dpi) {
-    .section-order {
-      background-image: linear-gradient(
-          rgba(46, 47, 66, 0.7),
-          rgba(46, 47, 66, 0.7)
-        ),
-        url(../images/order-image@2x.jpg);
-    }
-  } */
   .section-order {
     width: 1440px;
   }
   .section-order .container {
     max-width: 1440px;
-    /* padding: 188px 0; */
   }
   .section-order-container .container {
     width: 100;
@@ -455,6 +442,8 @@ body {
 
 /* ------- Strategy section ------- */
 
+/* ----- Mobile Strategy section ----- */
+/* Giving proper width */
 .section-strategy {
   padding: 116px 0;
   width: 288px;
@@ -472,14 +461,10 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-  /* visibility: hidden; */
 }
 
 .strategy-list-icon {
-  /* display: flex; */
   display: none;
-  /* justify-content: center;
-  align-items: center; */
   height: 112px;
   border-radius: 4px;
 }
@@ -495,19 +480,14 @@ body {
   text-align: center;
 }
 
+/* Flex-wrap helps moving images one below another - because of specified width */
 .section-strategy-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
-/* @media (min-width: 1200px) {
-  .section-strategy-list {
-    display: flex;
-    gap: 24px;
-  }
-} */
-
+/* This is not applying because of flex-wrap */
 .strategy-list {
   flex-basis: calc((100%-72px) / 4);
 }
@@ -534,9 +514,11 @@ body {
   text-align: left;
 }
 
+/* ----- Tablet Strategy section ----- */
 @media (min-width: 768px) {
   .section-strategy {
-    width: 736px;
+    width: 100%;
+    margin: 0 auto;
   }
   .section-strategy-list {
     display: flex;
@@ -560,6 +542,7 @@ body {
   }
 }
 
+/* ----- Laptop Strategy Section ----- */
 @media (min-width: 1158px) {
   .section-strategy {
     width: 1158px;
@@ -590,6 +573,8 @@ body {
 
 /* ------- Our team section ------- */
 
+/* ----- Mobile/Tablet Team section ----- */
+/* Works fine without any additional code because of flex-wrap as in the previous section */
 .section-our-team {
   background-color: #f4f4fd;
   line-height: 1.11;
@@ -602,6 +587,7 @@ body {
   margin-bottom: 72px;
 }
 
+/* Flex-wrap helps moving images one below another - because of specified width */
 .section-our-team-list {
   display: flex;
   flex-wrap: wrap;
@@ -690,6 +676,7 @@ body {
   fill: #f4f4fd;
 }
 
+/* ----- Laptop Team section ----- */
 @media (min-width: 1158px) {
   .section-our-team .container {
     width: 1158px;
@@ -698,6 +685,9 @@ body {
 }
 
 /* ------- Our portfolio section ------- */
+
+/* ----- Mobile Portfolio section ----- */
+/* Width taken from container class for mobile device */
 .section-our-portfolio {
   padding: 116px 0;
   margin: 0 auto;
@@ -723,12 +713,14 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ----- Tablet Portfolio section ----- */
 @media (min-width: 768px) {
   .our-portfolio-list-item {
     width: calc((100% - 24px) / 2);
   }
 }
 
+/* ----- Laptop Portfolio section ----- */
 @media (min-width: 1158px) {
   .section-our-portfolio .container {
     width: 1158px;
@@ -787,9 +779,8 @@ body {
 
 /* -------- Footer section -------- */
 
+/* ----- Mobile Footer section ----- */
 .page-footer {
-  /* display: flex;
-  gap: 116px; */
   background-color: #2e2f42;
   color: #f4f4fd;
   padding: 100px 0;
@@ -803,6 +794,7 @@ body {
   align-items: baseline;
 }
 
+/* ----- Tablet Footer section ----- */
 @media (min-width: 768px) {
   .page-footer .footer-container {
     display: flex;
@@ -818,6 +810,7 @@ body {
   }
 }
 
+/* ----- Laptop Footer section ----- */
 @media (min-width: 1158px) {
   .page-footer .footer-container {
     width: 1158px;
@@ -837,14 +830,6 @@ body {
   .form-subscribe {
     justify-content: center;
   }
-}
-
-.container-logo-text {
-  /* margin-right: 120px; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
 }
 
 .logo-footer {
@@ -868,10 +853,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-
-.container-social-media {
-  /* margin-right: 80px; */
 }
 
 .social-media-text {
@@ -905,15 +886,6 @@ body {
 .social-link:focus {
   background-color: #31d0aa;
 }
-
-/* .form-subscribe {
-  display: flex;
-  flex-direction: column;
-  You need this code for laptop layout
-  justify-content: center; 
-  align-items: center;
-  gap: 24px;
-} */
 
 .form-subscribe-label {
   display: block;
@@ -1039,6 +1011,7 @@ body {
   opacity: 1;
 }
 
+/* ----- Mobile Form ----- */
 .modal-container {
   visibility: hidden;
   opacity: 0;
@@ -1068,6 +1041,7 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ----- Tablet Form ----- */
 @media (min-width: 768px) {
   .modal-wrapper {
     top: 40%;
@@ -1076,6 +1050,7 @@ body {
   }
 }
 
+/* ----- Laptop Form ----- */
 @media (min-width: 1158px) {
   .modal-wrapper {
     width: 408px;
@@ -1267,7 +1242,7 @@ body {
   margin-right: 8px;
 }
 
-/* + is for neighbour elements */
+/* + is for the very next neighbour element */
 .form-checkbox:checked + .form-checkbox-label .form-checkbox-text {
   background-color: #404bbf;
   border: none;
