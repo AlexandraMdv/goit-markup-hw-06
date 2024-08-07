@@ -1,3 +1,3 @@
 # Git
 
-## Acest repository este pentru tema 5.
+## Acest repository este pentru tema 6.
