@@ -517,6 +517,7 @@ body {
 /* ----- Tablet Strategy section ----- */
 @media (min-width: 768px) {
   .section-strategy {
+    /* 100% width to use all the space available  */
     width: 100%;
     margin: 0 auto;
   }
